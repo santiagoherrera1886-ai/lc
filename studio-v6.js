@@ -85,7 +85,7 @@ ${tracks.map((t,i)=>`<button type="button" data-lc6-choice="${i}" aria-pressed="
 <div class="lc6-phone-top"><span class="lc6-phone-cam"></span><span id="lc6PhonePlatform">LITTLE CAESARS · META REELS</span><span>•••</span></div>
 <div class="lc6-phone-image"><img id="lc6PhoneImage" src="${assets.combo}" alt="Pizza Little Caesars en anuncio conceptual" loading="lazy">
 <div class="lc6-phone-photo-text" id="lc6PhotoText">EL PLAN NO ESPERA.</div></div>
-<div class="lc6-phone-bottom"><div class="lc6-social-dots"><span>♥</span><span>◉</span><span>↗</span></div><div class="lc6-phone-account"><strong>littlecaesars</strong><span id="lc6PhoneHook">El mejor plan empieza con un antojo.</span></div>
+<div class="lc6-phone-bottom"><div class="lc6-social-dots"><span>♥</span><span>◉</span><span>↗</span></div><div class="lc6-maps-info"><strong>Little Caesars Pizza</strong><small>📍 Buscar tienda cercana · Indicaciones</small></div><div class="lc6-phone-account"><strong>littlecaesars</strong><span id="lc6PhoneHook">El mejor plan empieza con un antojo.</span></div>
 <div class="lc6-phone-faux-cta" id="lc6PhoneCTA">Arma el plan ↗</div></div>
 </div><div class="lc6-bg-word">PIZZA!</div>
 <div class="lc6-left-foot"><span>DESIGN SYSTEM © 2026</span><span id="lc6LeftRole">DISCOVERY / REACH</span></div>
@@ -132,7 +132,7 @@ if(location.hash==="#creative")button.click();
 function select(index){
 active=Math.max(0,Math.min(tracks.length-1,index));
 const t=tracks[active];
-$("lc6Showcase").dataset.theme=t.gradient;
+$("lc6Showcase").dataset.theme=t.gradient;q(".lc6-phone").dataset.channel=t.platform.toLowerCase();
 $("lc6DeckNum").textContent=t.number+" / 04";
 $("lc6Objective").textContent=t.category;
 $("lc6PlatformName").textContent=t.platformCaption;
