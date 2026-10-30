@@ -259,3 +259,16 @@ body{background:radial-gradient(ellipse at 70% 7%,#ffeddc 0,transparent 28%),#fa
 .lc3-presentation .main,.main{width:100%!important;max-width:100%!important;margin:0;padding:0}
 .lc3-billboard,.lc3-creative-lab,.lc3-territory-stage{break-inside:avoid}
 }
+
+/* Keep the menu below both sticky header and brand marquee. */
+@media(min-width:851px){body:not(.lc3-presentation) .sidebar{top:114px;height:calc(100vh - 114px)}}
+@media(max-width:850px){body:not(.lc3-presentation) .sidebar{top:98px;height:calc(100vh - 98px)}}
+@media(max-width:500px){
+  .lc3-ticker-content{gap:18px}
+  .lc3-billboard h2{font-size:54px}
+  .lc3-billboard-content{min-height:0}
+  .lc3-creative-heading h2{font-size:28px}
+  .lc3-city-pills button{min-height:40px}
+  .lc3-curve-head h3{font-size:24px}
+  .lc3-curve-total{min-width:0}
+}
