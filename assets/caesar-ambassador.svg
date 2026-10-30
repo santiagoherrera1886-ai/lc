@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 430" role="img" aria-labelledby="title desc">
+<title id="title">Little Caesar-inspired cartoon ambassador</title>
+<desc id="desc">Illustrative Roman pizza ambassador in an orange toga, smiling and presenting pepperoni pizza; concept artwork, not an official brand asset.</desc>
+<defs><filter id="shadow"><feDropShadow dx="2" dy="5" stdDeviation="3" flood-opacity=".16"/></filter></defs>
+<g stroke="#1d1510" stroke-width="7" stroke-linecap="round" stroke-linejoin="round" filter="url(#shadow)">
+<path d="M152 295 143 368 171 369 190 302" fill="#fffaf2"/>
+<path d="M215 296 226 370 250 369 248 292" fill="#fffaf2"/>
+<path d="M137 370c-18 7-31 21-28 26h71l3-24zm80 0c-7 12-3 25 0 26h75c-4-11-19-21-38-27" fill="#fff9ef"/>
+<path d="M143 396v-18m26 18v-18m61 18v-18m20 18v-18" stroke-width="4" fill="none"/>
+<path d="M165 185c-30 23-32 63-41 122 26 30 113 43 164 10-3-48-34-117-67-133z" fill="#fa6217"/>
+<path d="M143 215c23 17 58 21 97 6m-67 5 18 90m17-90 27 88" fill="none" stroke-width="5"/>
+<path d="M153 303h125m-113 7v14m15-14v14m15-14v14m15-14v14m15-14v14m15-14v14m15-14v14" stroke-width="4" fill="none"/>
+<path d="M155 203c-29-4-42 10-55 35l-30 38-22-10c-11-3-20 4-16 14 8 11 27 16 40 14 25-5 42-36 64-53" fill="#fffaf2"/>
+<path d="M216 198c33-7 48-27 59-53l7-21c8-17 22-12 24-4 2 14-10 40-20 58-13 29-33 51-58 54" fill="#fffaf2"/>
+<path d="M282 126c-11-10-14-20-8-28 4-5 11-6 16 3 4-18 21-13 18-1 11-11 22-4 16 10 10-5 18 3 11 14l-24 20" fill="#fffaf2"/>
+<path d="M116 118c-37-48-27-101 16-112 37-9 75 6 85 36 13 0 33-5 48 2 7 4 9 15 1 23-17 14-32 19-57 21-15 29-44 53-71 48-9-2-17-7-22-18z" fill="#fffaf2"/>
+<path d="M132 58q12 18 23 0m30-8q10 18 22 0" fill="none" stroke-width="5"/>
+<path d="M212 75q-20 8-29 21 22 11 46 2" fill="#fffaf2"/>
+<path d="M124 135q26 15 56-4" fill="none" stroke-width="4"/>
+<path d="M98 83C79 62 85 31 101 16" fill="none" stroke-width="6"/>
+<path d="M95 23 77 16l11 16-22-4 15 13-22 4 21 10-20 8 25 6-17 11 26-3" fill="#fa6217" stroke-width="4"/>
+<path d="M138 36q-3-20 11-25m9 24q2-19 17-25m7 28q9-19 24-16" fill="none" stroke-width="4"/>
+<path d="M74 250q-8-12-13-8m1 36-16-15m21-4-19-12" fill="none" stroke-width="4"/>
+<path d="M280 116c21-13 48-12 66-19" fill="none" stroke-width="6"/>
+<ellipse cx="274" cy="78" rx="72" ry="26" fill="#ffc66d" transform="rotate(-5 274 78)"/>
+<ellipse cx="274" cy="73" rx="69" ry="22" fill="#ffb24c" transform="rotate(-5 274 73)"/>
+<ellipse cx="274" cy="73" rx="63" ry="17" fill="#f67120" stroke-width="3" transform="rotate(-5 274 73)"/>
+<g fill="#b62f13" stroke-width="2">
+<ellipse cx="238" cy="70" rx="8" ry="5"/><ellipse cx="263" cy="65" rx="8" ry="5"/><ellipse cx="293" cy="72" rx="8" ry="5"/><ellipse cx="321" cy="69" rx="7" ry="4"/><ellipse cx="267" cy="83" rx="8" ry="4"/><ellipse cx="303" cy="82" rx="7" ry="4"/>
+</g>
+</g>
+<g fill="#211610"><path d="m316 35 3-20 8 16m-16 12 15-10m0 64 12 8"/></g>
+</svg>
