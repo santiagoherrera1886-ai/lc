@@ -55,3 +55,17 @@ Archivos: index.html, styles.css, app.js. Tipografía Google Fonts, mapa Leaflet
 5. Definir UTM, búsquedas de rutas, conversiones locales y medición incremental / cupones por sede.
 
 Actualización de directorio y supuestos: 30 octubre 2026.
+
+
+## Rediseño V2 · 30 de octubre de 2026
+
+Se añadió una capa brand-first inspirada en la estructura editorial de Ritual, con identidad gráfica específica de Little Caesars. Esta capa conserva el directorio, mapa, simulador, cálculos y exportación CSV.
+
+- premium-v2.css: diseño editorial responsive en naranja Clementine, crema y carbón.
+- premium-v2.js: galerías de producto, mockups editoriales de Meta/TikTok/Google, cards de medios y presets de asignación 60/40, 40/60 y 25/75 alcance/tráfico.
+- assets/platforms/*.svg: SVG de logos de Meta, TikTok y Google alojados en el repositorio; fuente: https://simpleicons.org/
+- Logo wordmark: https://commons.wikimedia.org/wiki/File:Little_Caesars_wordmark.svg
+- Imágenes de productos de catálogo público Little Caesars: https://web.didiglobal.com/co/food/bogota/little-caesars-pizza-calle-134/5764607790761640952/ y https://web.didiglobal.com/co/food/bogota/little-caesars-pizza-calle-170/5764607628165252084/
+- Referencia de identidad: https://turnerduckworth.com/work/little-caesars
+
+Las vistas de anuncios son **conceptos editoriales**, no piezas publicadas ni aprobadas. La mezcla por plataformas es una sugerencia fija independiente del simulador por objetivos. Para uso comercial externo, confirmar derechos de uso de marca y fotografías, preferiblemente con el kit oficial provisto por el cliente.
