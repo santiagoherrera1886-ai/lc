@@ -29,7 +29,7 @@ body.lc7-home-active .lc7-topnav{display:flex;flex:1;justify-content:center;alig
 .lc7-topnav button{font:800 12px var(--font);border:0;background:transparent;color:#554e48;padding:27px 3px 22px;white-space:nowrap;position:relative;transition:color .18s}
 .lc7-topnav button.active,.lc7-topnav button:hover{color:#e25f14}
 .lc7-topnav button.active::after{position:absolute;content:'';height:3px;border-radius:10px;background:#eb5d13;bottom:12px;left:0;right:0}
-.lc7-site{--orange:#f36710;--red:#e74d09;--ink:#211712;--cream:#fff7eb;--font:var(--font);font-family:var(--font);max-width:1500px;background:#fcf9f3;margin:0 auto;box-shadow:0 15px 45px #812f091a;border-left:1px solid #f0dece;border-right:1px solid #f0dece}
+.lc7-site{--orange:#f36710;--red:#e74d09;--ink:#211712;--cream:#fff7eb;font-family:'DM Sans',Arial,sans-serif;max-width:1500px;background:#fcf9f3;margin:0 auto;box-shadow:0 15px 45px #812f091a;border-left:1px solid #f0dece;border-right:1px solid #f0dece}
 .lc7-site h1,.lc7-site h2,.lc7-site h3,.lc7-site p{margin:0}
 .lc7-site button{font-family:var(--font);cursor:pointer}
 .lc7-site img{display:block}
