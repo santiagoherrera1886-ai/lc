@@ -69,3 +69,16 @@ Se añadió una capa brand-first inspirada en la estructura editorial de Ritual,
 - Referencia de identidad: https://turnerduckworth.com/work/little-caesars
 
 Las vistas de anuncios son **conceptos editoriales**, no piezas publicadas ni aprobadas. La mezcla por plataformas es una sugerencia fija independiente del simulador por objetivos. Para uso comercial externo, confirmar derechos de uso de marca y fotografías, preferiblemente con el kit oficial provisto por el cliente.
+
+
+## Creative Studio V3 · 30 de octubre de 2026
+
+Esta versión es **mejora incremental** del proyecto existente, sin reemplazar su lógica de inversión, mapa ni directorio.
+
+- creative-v3.css: franja de marca animada, manifiesto publicitario con producto, estrategia en tres etapas, visual geográfico, perfiles editoriales, laboratorio de ideas y curva visual con ajustes responsive.
+- creative-v3.js: modo presentación (oculta lateral, se guarda localmente, Esc para salir), botones rápidos de Bogotá/Cali/Chía conectados al filtro real del directorio, alternancia Meta/TikTok/Google con copia de ideas, y curva de alcance recalculada al cambiar presupuesto/CPM/frecuencia/días.
+- Fuentes de las fotografías de marca/producto: catálogo de Little Caesars en DiDi Food Colombia y fotografía de marca/caja en Rappi, identificadas en los archivos fuente.
+- La visualización temporal de alcance es una **curva ilustrativa de distribución, no forecast temporal**, normalizada al valor total del modelo existente. No representa resultados medidos ni conversiones reales.
+- Se conservan la distribución editable COP $20M, las 18 ubicaciones de referencia que requieren validación de operación, y los 15 mercados adicionales de alcance.
+
+La app requiere conexión de red para cargar fotos externas, Google Fonts y Leaflet/OpenStreetMap. Para presentaciones comerciales formales, revisar licencias y sustituir fotos por recursos aprobados por Little Caesars.
