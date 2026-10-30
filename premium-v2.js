@@ -6,7 +6,7 @@ const BRAND_LOGO='https://upload.wikimedia.org/wikipedia/commons/0/06/Little_Cae
 const PIZZA_CLASSIC='https://img0.didiglobal.com/static/soda_public/img_8d6adfb490b9533d4fb81d933b35d3bb.jpg';
 const PIZZA_DUAL='https://img0.didiglobal.com/static/soda_public/do1_3uzsWEFmC7L1KZGaW9xN';
 const PIZZA_HAWAII='https://img0.didiglobal.com/static/soda_public/img_eb0c90888037add997bcd114d80bf8d5.jpg';
-const logos={meta:'https://cdn.simpleicons.org/meta/0866FF',tiktok:'https://cdn.simpleicons.org/tiktok/000000',google:'https://cdn.simpleicons.org/google/4285F4'};
+const logos={meta:'./assets/platforms/meta.svg',tiktok:'./assets/platforms/tiktok.svg',google:'./assets/platforms/google.svg'};
 const brandImage=(alt,src,cls='')=>'<img loading="lazy" class="'+cls+'" src="'+src+'" alt="'+alt+'" referrerpolicy="no-referrer">';
 const mediaInfo=[
 {name:'Meta',slug:'meta',share:55,budget:'$11,0 M',role:'ALCANCE + PROXIMIDAD',title:'Haz que todos la vean.',desc:'Reels, Stories, Feed y video para construir alcance nacional; mensajes específicos alrededor de tiendas verificadas.',ad:'Hoy el plan<br>es pizza.',note:'Reach + tráfico local',pizza:PIZZA_CLASSIC,platformText:'Publicación de Little Caesars · Ejemplo'},
