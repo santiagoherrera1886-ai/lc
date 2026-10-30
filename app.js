@@ -205,7 +205,7 @@ const blob=new Blob([csv],{type:'text/csv;charset=utf-8'});
 const u=URL.createObjectURL(blob);const a=document.createElement('a');a.href=u;a.download='Little-Caesars-Store-Impact-Lab.csv';document.body.appendChild(a);a.click();a.remove();URL.revokeObjectURL(u);
 }
 function route(name,changeHash){
-if(!['summary','territory','audiences','media','simulator','sources'].includes(name))name='summary';
+if(!['summary','territory','audiences','media','simulator','creative','sources'].includes(name))name='summary';
 $all('.view').forEach(v=>v.classList.toggle('active',v.id==='view-'+name));
 $all('[data-route]').forEach(b=>b.classList.toggle('active',b.dataset.route===name));
 if(changeHash)history.replaceState(null,'','#'+name);
