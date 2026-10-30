@@ -1,0 +1,91 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#10100f">
+<meta name="description" content="Little Caesars Store Impact Lab Colombia. Estrategia de alcance nacional y tráfico hacia tiendas, con presupuesto de $20 millones.">
+<title>Little Caesars | Store Impact Lab Colombia</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Outfit:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
+<link rel="stylesheet" href="./styles.css">
+<script defer src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script><script defer src="./app.js"></script>
+</head>
+<body>
+<header class="topbar"><div class="brand" role="banner"><span class="brand-icon">LC<span>✦</span></span><span class="brand-words"><b>Little Caesars<span class="orange">®</span></b><small>STORE IMPACT LAB / COLOMBIA</small></span></div>
+<div class="topbar-right"><span class="live-pill"><span class="green-dot"></span> PLAN ESTRATÉGICO · 2026</span><button class="light-button" id="downloadPlan">↓ Exportar plan</button><button class="mobile-trigger" id="mobileTrigger" aria-label="Abrir menú">☰</button></div></header>
+<div class="layout">
+<aside class="sidebar" id="sidebar">
+ <div class="sidebar-kicker">PLANNING WORKSPACE</div>
+ <nav class="side-nav" aria-label="Navegación">
+  <button class="nav-item active" data-route="summary"><span>◫</span> Resumen ejecutivo <small>01</small></button>
+  <button class="nav-item" data-route="territory"><span>◎</span> Tiendas & territorio <small>02</small></button>
+  <button class="nav-item" data-route="audiences"><span>◉</span> Audience Lab <small>03</small></button>
+  <button class="nav-item" data-route="media"><span>▤</span> Arquitectura de medios <small>04</small></button>
+  <button class="nav-item" data-route="simulator"><span>◈</span> Simulador de inversión <small>05</small></button>
+  <button class="nav-item" data-route="sources"><span>≡</span> Fuentes & metodología <small>06</small></button>
+ </nav>
+ <div class="sidebar-bottom"><div class="sidebar-photo"></div><div class="sidebar-bottom-content"><span class="micro">NUESTRA IDEA</span><strong>La pizza está lista.<br>Que el país se antoje.</strong><p>Presencia nacional, intención local.</p></div></div>
+ <div class="side-note">Las cifras de medios son <b>simulaciones</b>, no resultados reales ni cifras oficiales de Meta, TikTok o Google.</div>
+</aside>
+<main class="main" id="main">
+<section class="view active" id="view-summary" aria-labelledby="summaryTitle">
+ <div class="page-eyebrow">LITTLE CAESARS · COLOMBIA <span class="eyebrow-line"></span> MEDIA STRATEGY 2026</div>
+ <div class="hero"><div class="hero-copy"><div class="hero-chip">🍕 BRAND AWARENESS + STORE TRAFFIC</div><h1 id="summaryTitle">Pizza lista.<br><em>País antojado.</em></h1><p>Una estrategia que construye recordación en toda Colombia y convierte la cercanía a tiendas en intención de visita. Dos objetivos, un solo ecosistema.</p><div class="hero-actions"><button class="button-white" data-goto="simulator">Simular inversión <span>↗</span></button><button class="button-ghost" data-goto="territory">Explorar cobertura ↗</button></div></div><div class="hero-image" aria-label="Pizza artesanal fotografía de referencia"></div><div class="hero-stamp">HOT-N-READY<br><b>×</b><br>MEDIA READY</div></div>
+ <div class="section-line"><div><span class="kicker">01 / NORTH STAR</span><h2>Una estrategia, <span>dos motores.</span></h2></div><p>El alcance llega a todo el país. El tráfico se activa alrededor de tiendas verificadas.</p></div>
+ <div class="stats-grid">
+  <div class="metric metric-highlight"><div class="metric-label">PRESUPUESTO TOTAL <span>↗</span></div><strong id="kpiBudget">$20,0 M</strong><div class="metric-foot">COP · 100% asignado</div></div>
+  <div class="metric"><div class="metric-label">ALCANCE MODELADO <span>↗</span></div><strong id="kpiReach">—</strong><div class="metric-foot">Personas únicas estimadas*</div></div>
+  <div class="metric"><div class="metric-label">IMPRESIONES MODELADAS <span>↗</span></div><strong id="kpiImpressions">—</strong><div class="metric-foot">Dos objetivos combinados*</div></div>
+  <div class="metric"><div class="metric-label">CLICS DE INTENCIÓN <span>↗</span></div><strong id="kpiClicks">—</strong><div class="metric-foot">Clics potenciales, no visitas</div></div>
+ </div>
+ <div class="two-col">
+ <article class="panel media-split-panel"><div class="panel-head"><div><span class="kicker">EL MIX PROPUESTO</span><h3>De awareness<br>a la puerta.</h3></div><button class="tiny-link" data-goto="simulator">Editar mix ↗</button></div>
+ <div class="split-body"><div class="split-donut" id="mixDonut"><span><b id="mixCenter">$20M</b><small>INVERSIÓN</small></span></div><div class="split-detail"><div class="legend-row"><span class="legend-icon orange-bg">◉</span><div><b>Alcance nacional</b><small>Construcción de marca · toda Colombia</small></div><strong id="mixReach">$8,0 M</strong></div><div class="legend-row"><span class="legend-icon dark-bg">⌖</span><div><b>Tráfico a tienda</b><small>Radios alrededor de tiendas</small></div><strong id="mixStore">$12,0 M</strong></div><div class="distribution-bar"><span id="reachBar"></span><span id="storeBar"></span></div><p class="small-note">No se atribuyen visitas físicas automáticamente. Las visitas requieren medición adicional.</p></div></div></article>
+ <article class="panel territories-panel"><div class="panel-head"><div><span class="kicker">GEOGRAFÍA INTELIGENTE</span><h3>Nacional de verdad.</h3></div><span class="tag">18 puntos / referencia</span></div>
+ <div class="territory-tiles"><div class="territory-tile"><span>01</span><b>18</b><small>Tiendas en directorio<br>de trabajo</small></div><div class="territory-tile"><span>02</span><b>3</b><small>Municipios con<br>tiendas identificadas</small></div><div class="territory-tile"><span>03</span><b>+15</b><small>Mercados sugeridos<br>para awareness</small></div></div>
+ <p class="territory-context">No confundimos una apertura <b>proyectada</b> con una tienda operativa. El componente de alcance admite toda Colombia y los mercados de expansión son solo hipótesis estratégicas.</p><button class="outline-button" data-goto="territory">Ver tiendas, direcciones y ciudades ↗</button></article></div>
+ <div class="section-line"><div><span class="kicker">02 / AUDIENCE THINKING</span><h2>Cuatro momentos. <span>Una pizza.</span></h2></div><button class="text-button" data-goto="audiences">Explorar clústeres ↗</button></div>
+ <div class="audience-row" id="summaryPersonas"></div>
+ <div class="big-banner"><div><span class="kicker">NUESTRO PRINCIPIO DE PLANEACIÓN</span><h2>Donde hay tienda,<br><em>movemos personas.</em><br>Donde no hay tienda,<br><em>movemos marca.</em></h2></div><div class="banner-circle">PIZZA<br>✦<br>PIZZA</div></div>
+</section>
+<section class="view" id="view-territory" aria-labelledby="territoryTitle">
+ <div class="page-head"><div><span class="kicker">02 / STORE NETWORK & MARKET COVERAGE</span><h1 id="territoryTitle">Las tiendas son el punto.<br><em>Colombia es el mapa.</em></h1><p>Inventario de puntos sustentados en fuentes públicas y mercados adicionales de notoriedad. El tráfico a tienda solo aplica a establecimientos operativos confirmados antes de pautar.</p></div><div class="head-stat"><b>18</b><small>Tiendas documentadas*</small></div></div>
+ <div class="notice">⚑ <b>Control de calidad:</b> 17 sedes aparecen en términos oficiales de una campaña 2026 y una tienda adicional en Ciudad Salitre fue reportada en septiembre. Antes de activar, confirmar aperturas, vigencia y geocodificación GPS con el cliente. Los pines del mapa son ubicaciones de <b>sector aproximadas</b>; la dirección textual procede de las fuentes.</div>
+ <div class="toolbar"><div class="segmented" id="territoryMode"><button data-mode="stores" class="selected">Tiendas documentadas</button><button data-mode="markets">Alcance nacional</button></div><select id="cityFilter" aria-label="Filtrar por ciudad"><option value="all">Todos los municipios</option><option value="Bogotá">Bogotá</option><option value="Cali">Cali</option><option value="Chía">Chía</option></select><input id="storeSearch" placeholder="Buscar tienda, calle o zona…" aria-label="Buscar tienda"></div>
+ <div class="map-layout"><div class="map-container"><div id="map"></div><div class="map-tag">◎ Georreferencia aproximada por sector · no GPS operativo</div></div><div class="location-list" id="locationList"></div></div>
+ <div class="panel national-panel"><div class="panel-head"><div><span class="kicker">NO SOLO BOGOTÁ Y CALI</span><h3>Alcance que trasciende las tiendas.</h3></div><span class="tag">COLOMBIA / COBERTURA ABIERTA</span></div><p>El awareness se plantea con segmentación nacional, con lectura y optimización por territorios. En ciudades sin puntos confirmados no prometemos visitas físicas: usamos cobertura de marca, búsquedas e interés futuro.</p><div class="market-chips" id="marketChips"></div></div>
+</section>
+<section class="view" id="view-audiences" aria-labelledby="audiencesTitle">
+ <div class="page-head"><div><span class="kicker">03 / PEOPLE, NOT JUST PIZZA</span><h1 id="audiencesTitle">Las ganas de pizza<br><em>no tienen un solo perfil.</em></h1><p>Cuatro perfiles creativos, ilustrativos y no excluyentes. No constituyen audiencias medidas ni tamaños reportados por plataformas.</p></div></div>
+ <div class="persona-grid" id="personaGrid"></div>
+ <div class="panel"><span class="kicker">ESTRATEGIA DE SEGMENTACIÓN</span><h3>Primero amplitud. Luego señales.</h3><div class="principles"><div><b>01</b><strong>Alcance nacional</strong><p>Audiencias amplias 18+, creatividades contextualizadas y medición por región. Evitar limitar la campaña a la huella de tiendas.</p></div><div><b>02</b><strong>Radio local</strong><p>Segmentación por proximidad alrededor de las tiendas, revisando densidad, solapamientos y tiempos reales de desplazamiento.</p></div><div><b>03</b><strong>Contexto del antojo</strong><p>Momentos de almuerzo, tarde, cena, fines de semana, promociones y conveniencia. Son hipótesis para testeo.</p></div></div></div>
+</section>
+<section class="view" id="view-media" aria-labelledby="mediaTitle">
+ <div class="page-head"><div><span class="kicker">04 / MEDIA ARCHITECTURE</span><h1 id="mediaTitle">Cada plataforma<br><em>tiene un trabajo.</em></h1><p>Distribución de referencia editable. El objetivo operativo del tráfico es generar clics de intención o solicitudes de ruta, no afirmar visitas verificadas.</p></div></div>
+ <div class="channel-grid" id="channelGrid"></div>
+ <div class="panel"><span class="kicker">FLUJO RECOMENDADO</span><div class="funnel-cards"><div><small>01 / DESCUBRIR</small><strong>Meta + TikTok + YouTube</strong><p>Cobertura y frecuencia eficiente en Colombia.</p></div><span>→</span><div><small>02 / CONSIDERAR</small><strong>Formatos locales</strong><p>Ofertas, video corto y prueba de relevancia.</p></div><span>→</span><div><small>03 / ACTUAR</small><strong>Maps + rutas + tienda</strong><p>Medir clics a indicaciones e intención de desplazamiento.</p></div></div></div>
+ <div class="notice"><b>Google Ads:</b> Performance Max para objetivos de tienda y acciones locales exige una configuración y elegibilidad adecuadas de ubicaciones vinculadas. En Meta o TikTok, los clics y las visitas al perfil no equivalen a personas que entraron a la tienda.</div>
+</section>
+<section class="view" id="view-simulator" aria-labelledby="simTitle">
+ <div class="page-head"><div><span class="kicker">05 / SCENARIO ENGINE</span><h1 id="simTitle">Mueve el presupuesto.<br><em>Cambia el impacto.</em></h1><p>Simulación aritmética editable. Valores predeterminados son supuestos de planeación, no precios contratados ni rendimiento garantizado.</p></div><button class="outline-button" id="resetSim">↺ Restaurar base</button></div>
+ <div class="sim-grid"><div class="panel controls-panel">
+ <div class="control-head"><span class="kicker">VARIABLES DE INVERSIÓN</span><span class="tag">EDITABLE</span></div>
+ <div class="control"><div><label for="budget">Presupuesto total</label><strong id="budgetOutput">$20.000.000</strong></div><input id="budget" type="range" min="5000000" max="80000000" step="1000000"></div>
+ <div class="control"><div><label for="storePercent">% tráfico a tiendas</label><strong id="storePercentOutput">60%</strong></div><input id="storePercent" type="range" min="10" max="90" step="5"></div>
+ <div class="control"><div><label for="cpm">CPM promedio modelado</label><strong id="cpmOutput">$7.000</strong></div><input id="cpm" type="range" min="3000" max="18000" step="500"></div>
+ <div class="control"><div><label for="frequency">Frecuencia media</label><strong id="frequencyOutput">2,5</strong></div><input id="frequency" type="range" min="1" max="8" step=".5"></div>
+ <div class="control"><div><label for="cpc">CPC de intención modelado</label><strong id="cpcOutput">$1.000</strong></div><input id="cpc" type="range" min="300" max="3000" step="50"></div>
+ <div class="control"><div><label for="days">Duración de campaña</label><strong id="daysOutput">30 días</strong></div><input id="days" type="range" min="7" max="90" step="1"></div>
+ <p class="small-note">La frecuencia se aplica como promedio de planeación a las impresiones. El alcance neto se ajusta con una deduplicación de trabajo del 15% entre líneas. Puede variar ampliamente.</p>
+ </div><div class="panel sim-results"><span class="kicker">RESULTADOS DEL ESCENARIO</span><div class="sim-big"><small>ALCANCE COMBINADO MODELO</small><strong id="simReach">—</strong><span>Personas únicas estimadas*</span></div><div class="sim-kpis"><div><small>IMPRESIONES</small><strong id="simImpressions">—</strong></div><div><small>CLICS DE INTENCIÓN</small><strong id="simClicks">—</strong></div><div><small>INVERSIÓN / DÍA</small><strong id="simDaily">—</strong></div><div><small>COSTO / 1.000 ALCANZADOS</small><strong id="simCpr">—</strong></div></div><div class="sim-alloc"><div class="sim-alloc-row"><span>Alcance nacional</span><b id="simAwarenessBudget"></b></div><div class="sim-alloc-row"><span>Tráfico a tienda</span><b id="simTrafficBudget"></b></div><div class="sim-track"><span id="simTrackAw"></span><span id="simTrackTr"></span></div></div><button class="button-primary" id="copyScenario">Copiar escenario ↗</button></div></div>
+ <div class="panel sim-explainer"><span class="kicker">QUÉ SÍ Y QUÉ NO MIDE ESTE MODELO</span><div class="explainer-cols"><p><b>✔ Calcula</b><br>Distribución del presupuesto, impresiones por CPM, alcance por frecuencia y clics potenciales a partir del CPC supuesto.</p><p><b>✕ No calcula</b><br>Ventas reales, transacciones incrementales, visitas físicas verificadas o audiencias reales obtenidas de las plataformas.</p><p><b>◎ Cómo validarlo</b><br>Conectar cuentas publicitarias, Google Business Profile/Locations, enlaces UTM y, cuando sea posible, cupones por tienda o lift tests.</p></div></div>
+</section>
+<section class="view" id="view-sources" aria-labelledby="sourcesTitle">
+ <div class="page-head"><div><span class="kicker">06 / RESEARCH & TRANSPARENCY</span><h1 id="sourcesTitle">Primero la fuente.<br><em>Después la proyección.</em></h1><p>Conservamos las fuentes públicas de las ubicaciones y distinguimos hechos, escenarios y aspiraciones de expansión.</p></div></div>
+ <div class="sources-grid" id="sourcesGrid"></div>
+ <div class="panel methodology"><span class="kicker">METODOLOGÍA DE PROYECCIÓN</span><h3>Fórmulas transparentes.</h3><p><b>Impresiones</b> = inversión / CPM × 1.000. <b>Alcance bruto</b> = impresiones / frecuencia. <b>Alcance combinado</b> = alcance bruto × 0,85 como hipótesis de deduplicación (no medición). <b>Clics potenciales</b> = inversión de tráfico / CPC. No existen visitas inferidas de estos clics.</p><p>El número de tiendas es un corte de fuentes públicas, no una auditoría de aperturas. Las coordenadas de representación en el mapa son aproximadas. Las direcciones de origen deben contrastarse con la operación antes de activar campañas.</p></div>
+</section>
+<footer> LITTLE CAESARS · STORE IMPACT LAB · COLOMBIA <span>Documento estratégico interactivo · 30 oct 2026 · No afiliado a sistemas internos de la marca</span></footer>
+</main></div>
+</body></html>
