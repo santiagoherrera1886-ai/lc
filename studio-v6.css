@@ -272,3 +272,21 @@ body{--lc6-stripe:linear-gradient(135deg,#ffe8d60f 25%,transparent 25%,transpare
 .lc6-wall-grid{break-inside:avoid}
 .lc6-home-banner{break-inside:avoid}
 }
+
+
+/* Preview mode is true to each platform's visual language. */
+.lc6-maps-info{display:none}
+.lc6-phone[data-channel=google] .lc6-phone-top{background:white;color:#394354;border-bottom:1px solid #e7e8ea}
+.lc6-phone[data-channel=google] .lc6-phone-cam{background:#f1f1f1}
+.lc6-phone[data-channel=google] .lc6-phone-bottom{background:#fff}
+.lc6-phone[data-channel=google] .lc6-social-dots,.lc6-phone[data-channel=google] .lc6-phone-account{display:none}
+.lc6-phone[data-channel=google] .lc6-maps-info{display:flex;flex-direction:column;gap:6px;margin:5px 0 10px}
+.lc6-maps-info strong{font:900 13px var(--font);color:#273241}
+.lc6-maps-info small{color:#6c7c92;font-size:10px;line-height:1.35}
+.lc6-phone[data-channel=google] .lc6-phone-faux-cta{background:#4285f4}
+.lc6-phone[data-channel=tiktok] .lc6-phone-top,.lc6-phone[data-channel=tiktok] .lc6-phone-bottom{background:#121212;color:white}
+.lc6-phone[data-channel=tiktok] .lc6-social-dots{color:white}
+.lc6-phone[data-channel=tiktok] .lc6-phone-account span{color:#c9c9c9}
+.lc6-phone[data-channel=tiktok] .lc6-phone-faux-cta{background:#ff2459;color:white}
+.lc6-phone[data-channel=tiktok] .lc6-phone-photo-text{color:#fff;text-shadow:2px 2px 0 #ff2459}
+.lc6-phone[data-channel=meta] .lc6-phone-faux-cta{background:#0866ff}
