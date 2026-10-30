@@ -292,3 +292,25 @@ body{background:#f9f4eb}
 .lc4-compare-foot{font-size:8px;line-height:1.7}
 }
 @media(prefers-reduced-motion:reduce){.lc4-stage-photo>img,.lc4-nav-tiles button,.lc4-stage-cta button{transition:none!important}}
+
+/* V4 small-device polish */
+@media(max-width:540px){
+ .topbar{padding:0 9px;gap:4px}
+ .topbar .brand{gap:5px}
+ .topbar .lc-top-logo{width:112px;max-width:112px;height:38px}
+ .topbar .lc-brand-divider,.topbar .lc-brand-sub{display:none}
+ .topbar .topbar-right{gap:4px}
+ .topbar .light-button{padding:8px 8px;font-size:9px}
+ .topbar .mobile-trigger{padding:7px 8px;font-size:15px}
+ .topbar .lc3-present-button{padding:7px 8px}
+ .lc4-monument{font-size:clamp(43px,11vw,63px)}
+}
+@media(max-width:390px){
+ .topbar .lc-top-logo{width:98px;max-width:98px}
+ .topbar .light-button{font-size:8px;letter-spacing:-.04em}
+ .lc4-monument{font-size:42px}
+ .lc4-primary{gap:10px}
+ .lc4-stage-cta button{font-size:10px}
+ .lc4-quote-stamp{display:none}
+ .lc4-pizza-quote{grid-template-columns:1fr}
+}
