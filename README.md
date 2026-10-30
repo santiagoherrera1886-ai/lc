@@ -82,3 +82,19 @@ Esta versión es **mejora incremental** del proyecto existente, sin reemplazar s
 - Se conservan la distribución editable COP $20M, las 18 ubicaciones de referencia que requieren validación de operación, y los 15 mercados adicionales de alcance.
 
 La app requiere conexión de red para cargar fotos externas, Google Fonts y Leaflet/OpenStreetMap. Para presentaciones comerciales formales, revisar licencias y sustituir fotos por recursos aprobados por Little Caesars.
+
+
+## V4 — Creative Experience (30 octubre 2026)
+
+La versión V4 sustituye visualmente las portadas y banners redundantes de V2/V3 con una **portada cinematográfica en tres escenas seleccionables**: alcance, tráfico hacia tienda e impacto de medios. Incorpora tipografía publicitaria, identidad Clementine, fotografías de producto, una narrativa en cards y mejoras responsive. La capa se carga a continuación de app.js, premium-v2.js y creative-v3.js; no altera las reglas de geografía ni los cálculos base.
+
+**Interacciones nuevas**
+- Carrusel manual de 3 escenas con navegación anterior/siguiente, botones 01/02/03 y teclado al enfocar el escenario. Sin reproducción automática.
+- Navegación rápida visual a Audience Lab, medios y tiendas.
+- Filtro editorial de los cuatro perfiles de audiencia (con la opción Todos), sin cambiar los universos.
+- Comparación de hasta tres escenarios en el simulador. Guarda y recupera desde localStorage y exporta CSV con presupuesto, split, CPM, frecuencia, impresiones, alcance y clics potenciales.
+- En móvil se reducen controles de cabecera sin ocultar acciones importantes.
+
+**Archivos**: experience-v4.js, experience-v4.css. Para volver a V3, basta quitar esos enlaces de index.html. Las secciones previas no se borraron.
+
+**Limitaciones**: Los escenarios son simulaciones aritméticas. Los clics potenciales no son visitas a tiendas. Las fotos de productos de DiDi/Rappi son referencias de catálogo en URLs externas y pueden necesitar sustitución por material aprobado por la marca para un uso comercial definitivo. No se verificaron creativos en un navegador con capturas; se validó sintaxis de JavaScript/CSS y publicación estática en Vercel.
