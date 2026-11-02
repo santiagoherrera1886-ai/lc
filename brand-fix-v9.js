@@ -10,15 +10,13 @@ const fallbackLabel="Little Caesars";
 const $=(s,root=document)=>root.querySelector(s);
 const $$=(s,root=document)=>Array.from(root.querySelectorAll(s));
 function emblemError(img){
- const parent=img.parentElement;
- if(!parent)return;
- img.remove();
- if(!parent.querySelector(".lc9-icon-fallback")){
-  const mark=document.createElement("span");
-  mark.className="lc9-icon-fallback";mark.textContent="LC";
-  mark.setAttribute("aria-label","Little Caesars");
-  parent.append(mark);
- }
+ if(!img.isConnected)return;
+ const mark=document.createElement("span");
+ mark.className=(img.getAttribute("class")||"")+" lc9-icon-fallback";
+ mark.textContent="LC";
+ mark.setAttribute("role","img");
+ mark.setAttribute("aria-label","Little Caesars");
+ img.replaceWith(mark);
 }
 function setEmblem(img){
  if(!img||img.dataset.lc9Official==="1")return;
