@@ -9,9 +9,9 @@ const $=id=>DOC.getElementById(id);
 const $$=(sel,root=DOC)=>Array.from(root.querySelectorAll(sel));
 const KEY='lc-intro-v8-seen';
 const KEY_NO_MOTION=window.matchMedia&&window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-const intro=$('lc8Intro');
+let intro=$('lc8Intro');
 let closing=false;
-let removeTimer=0,showTimer=0,stageTimer=0;
+let removeTimer=0,showTimer=0,stageTimer=0,autoTimer=0;
 const safeStore={
  get(){try{return window.sessionStorage.getItem(KEY)==='1'}catch(e){return false}},
  set(){try{window.sessionStorage.setItem(KEY,'1')}catch(e){}}
@@ -22,6 +22,7 @@ function dismissIntro(skipped){
  safeStore.set();
  window.clearTimeout(showTimer);
  window.clearTimeout(stageTimer);
+ window.clearTimeout(autoTimer);
  intro.classList.add('lc8-leaving');
  intro.setAttribute('aria-hidden','true');
  if(skipped)intro.setAttribute('data-skipped','1');
@@ -53,6 +54,7 @@ function replayIntro(){
  if(!el)return;
  closing=false;
  DOC.body.prepend(el);
+ intro=el;
  DOC.body.classList.add('lc8-intro-open');
  DOC.body.classList.remove('lc8-intro-complete');
  DOC.documentElement.classList.remove('lc8-intro-finished');
@@ -70,6 +72,7 @@ function initIntro(node,replay){
  DOC.body.classList.add('lc8-intro-open');
  DOC.body.classList.remove('lc8-intro-complete');
  node.removeAttribute('aria-hidden');
+ node.dataset.stage='1';
  const skip=node.querySelector('[data-lc8-skip]');
  skip?.addEventListener('click',()=>dismissIntro(true),{once:true});
  // Escape never traps people behind the opening sequence.
@@ -86,7 +89,7 @@ function initIntro(node,replay){
  // Each card is a short part of the story, not a misleading percent loader.
  stageTimer=window.setTimeout(()=>node.dataset.stage='2',650);
  showTimer=window.setTimeout(()=>node.dataset.stage='3',1400);
- window.setTimeout(()=>dismissIntro(false),2700);
+ autoTimer=window.setTimeout(()=>dismissIntro(false),2700);
 }
 function addReplay(){
  const foot=DOC.querySelector('.lc7-footer-links');
