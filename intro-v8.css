@@ -202,3 +202,9 @@ body:not(.lc7-home-active) .main .button-primary:hover{background:#fa8139}
  body.lc8-intro-complete .lc7-hero-copy,body.lc8-intro-complete .lc7-hero-mascot,body.lc8-intro-complete .lc7-hero-photo>img{animation:none!important}
  .lc7-flight-card,.lc7-impact-card,.lc7-concept-image img{transition:none!important}
 }
+
+
+/* Graceful degradation: in case a deferred script is blocked, the introduction
+   releases the page after seven seconds rather than trapping the visitor. */
+.lc8-intro:not(.lc8-leaving){animation:lc8IntroFailsafe 0s linear 7s forwards}
+@keyframes lc8IntroFailsafe{to{visibility:hidden;pointer-events:none}}
