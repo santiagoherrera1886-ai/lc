@@ -107,6 +107,10 @@ function fixMediaBranding(){
 }
 function initialize(){
  fixLogo();fixIntroLogo();replaceMascots();fixMetricIcons();fixMediaBranding();
+ // All Google representations share one recognizable local, four-color logo.
+ $('img[src*="assets/platforms/google.svg"]').forEach(img=>{
+  img.src="./assets/platforms/google-color.svg";
+ });
 }
 if(document.readyState==="loading")document.addEventListener("DOMContentLoaded",initialize,{once:true});else initialize();
 })();
