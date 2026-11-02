@@ -5,8 +5,6 @@ const $=id=>document.getElementById(id);
 const qs=(sel,root=document)=>root.querySelector(sel);
 const qsa=(sel,root=document)=>[...root.querySelectorAll(sel)];
 const MASCOT="./assets/caesar-ambassador.svg";
-const CLASSIC_MASCOT="https://www.liblogo.com/img-logo/li7198l305-little-caesars-logo-little-caesars-pizza-best-value-delivery-and-carryout.png";
-const STICKER_MASCOT="https://www.clipartmax.com/png/middle/90-904333_pizza-pizza-little-caesars.png";
 const PIZZA="https://img0.didiglobal.com/static/soda_public/img_8d6adfb490b9533d4fb81d933b35d3bb.jpg";
 const PIZZA2="https://img0.didiglobal.com/static/soda_public/do1_E8gDvXml7Ra9rilRSUJZ";
 const PIZZA3="https://img0.didiglobal.com/static/soda_public/do1_dkSybJU5Qi4e6FutGsF1";
@@ -119,11 +117,13 @@ view.insertAdjacentHTML("afterbegin",`<div id="lc7Root" class="lc7-site">
 <div class="lc7-footer-seal"><img src="${MASCOT}" alt="" aria-hidden="true"><span>PIZZA PEOPLE<br>ALWAYS WIN! ✳</span></div>
 <div class="lc7-footer-disclaimer">Proyecto de planeación · Sin afiliación con herramientas internas de Little Caesars · Todas las métricas son escenarios, no resultados reales. *El inventario de tiendas está sujeto a verificación operativa.</div>
 </footer></div>`);
-// Prefer actual classic mascot imagery where available, falling back to the hosted concept SVG.
-qsa(".lc7-hero-mascot,.lc7-photo-sticker img,.lc7-peek-mascot,.lc7-thumb-mascot,.lc7-footer-seal img").forEach((img,i)=>{
- const remote=(i===1||i===3)?STICKER_MASCOT:CLASSIC_MASCOT;
- img.addEventListener("error",function(){if(this.src!==new URL(MASCOT,location.href).href){this.onerror=null;this.src=MASCOT}},{once:true});
- img.src=remote;
+// Keep every Caesar illustration self-hosted: the old external PNG links
+// contained a baked-in gray checkerboard, which no CSS transparency can fix.
+qsa(".lc7-hero-mascot,.lc7-photo-sticker img,.lc7-peek-mascot,.lc7-thumb-mascot,.lc7-footer-seal img").forEach(img=>{
+ img.src=MASCOT;
+ img.setAttribute("data-lc-mascot","vector");
+ img.decoding="async";
+ img.style.background="transparent";
 });
 qsa("#lc7Root img").forEach(img=>{
  const source=img.getAttribute("src")||"";
