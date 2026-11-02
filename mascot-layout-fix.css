@@ -1,0 +1,115 @@
+/* LITTLE CAESARS / V9
+   Image-asset cleanup + responsive containment
+   Prevent baked checkerboard PNGs from appearing on mascot placements.
+   Fix clipping/oversized grid sections at mid-size desktop widths.
+*/
+html,body{max-width:100%;overflow-x:clip}
+body.lc7-home-active .layout{display:block!important;width:100%;max-width:100%;min-width:0}
+body.lc7-home-active .main{width:100%!important;max-width:100%!important;min-width:0!important;box-sizing:border-box;margin:0 auto!important;padding:0 clamp(0px,2vw,26px)!important;overflow-x:clip!important}
+body.lc7-home-active #view-summary{width:100%;min-width:0;max-width:100%;margin:0}
+body.lc7-home-active #lc7Root{display:block;width:100%;max-width:1500px;min-width:0;box-sizing:border-box;margin:0 auto}
+#lc7Root .lc7-daily{grid-template-columns:minmax(0,1.22fr) minmax(0,.71fr) minmax(0,.82fr)}
+#lc7Root .lc7-middle{grid-template-columns:minmax(0,1.17fr) minmax(0,.83fr)}
+#lc7Root .lc7-location{grid-template-columns:minmax(0,.87fr) minmax(0,.54fr) minmax(0,1.45fr)}
+#lc7Root .lc7-hero-copy{min-width:0;width:50%;max-width:50%;padding-left:clamp(22px,3.2vw,48px)}
+#lc7Root .lc7-hero h1{font-size:clamp(56px,6.5vw,110px);line-height:.83;max-width:100%}
+#lc7Root .lc7-hero-photo{width:42%}
+#lc7Root .lc7-hero-mascot{left:46%;width:24%;height:88%;bottom:-12%;z-index:4;object-fit:contain;object-position:center bottom}
+#lc7Root .lc7-hero-scribble.scribble-1{left:59%;top:60%;transform:rotate(-9deg);z-index:5;pointer-events:none}
+#lc7Root .lc7-hero-scribble.scribble-2{right:3%;top:34%;z-index:5}
+#lc7Root .lc7-hero-mascot,
+#lc7Root .lc7-photo-sticker img,
+#lc7Root .lc7-peek-mascot,
+#lc7Root .lc7-thumb-mascot,
+#lc7Root .lc7-outro img,
+#lc7Root .lc7-footer-seal img{
+ background:none!important;
+ background-color:transparent!important;
+ border:0!important;
+ border-radius:0!important;
+ mix-blend-mode:normal;
+ object-fit:contain;
+ image-rendering:auto;
+}
+#lc7Root .lc7-hero-mascot{filter:drop-shadow(7px 13px 7px #6e2d082e)}
+#lc7Root .lc7-photo-sticker img{width:65px;height:77px;object-fit:contain;flex:0 0 65px}
+#lc7Root .lc7-photo-sticker{top:17px;left:15px;padding:3px 12px 3px 4px;transform:rotate(-7deg);border-radius:11px;box-shadow:0 10px 18px #35160535}
+#lc7Root .lc7-photo-sticker span{font-size:11px}
+#lc7Root .lc7-peek-mascot{left:-40px;width:85px;bottom:-21px;transform:rotate(11deg)}
+#lc7Root .lc7-thumb-mascot{width:60px;height:90px;top:-20px;right:-13px;transform:rotate(18deg)}
+#lc7Root .lc7-footer-seal img{width:50px;height:61px}
+#lc7Root .lc7-outro img{width:83px;height:94px}
+#lc7Root .lc7-hero-actions{position:relative;z-index:8}
+#lc7Root .lc7-impact-card{min-width:0}
+#lc7Root .lc7-journey,#lc7Root .lc7-photo-card,#lc7Root .lc7-impact,
+#lc7Root .lc7-flight,#lc7Root .lc7-concepts,#lc7Root .lc7-store-search,
+#lc7Root .lc7-store-tally,#lc7Root .lc7-map-panel{min-width:0}
+#lc7Root .lc7-flight{grid-template-columns:minmax(0,.56fr) minmax(0,1fr)}
+#lc7Root .lc7-flight-cards{grid-template-columns:repeat(3,minmax(0,1fr))}
+#lc7Root .lc7-concept-row{grid-template-columns:repeat(3,minmax(0,1fr))}
+#lc7Root .lc7-journey{grid-template-columns:minmax(0,.59fr) minmax(0,1.16fr)}
+/* The existing 3-column dashboard layout was too wide at 1150–1300px,
+   causing horizontal page scrolling and clipping the hero headline. */
+@media (min-width:901px) and (max-width:1320px){
+ #lc7Root .lc7-daily{grid-template-columns:minmax(0,1fr) minmax(0,.70fr)}
+ #lc7Root .lc7-journey{grid-column:1;grid-row:1;grid-template-columns:minmax(0,.62fr) minmax(0,1.1fr)}
+ #lc7Root .lc7-photo-card{grid-column:2;grid-row:1}
+ #lc7Root .lc7-impact{grid-column:1/-1;grid-row:2}
+ #lc7Root .lc7-impact-grid{gap:14px}
+ #lc7Root .lc7-impact-card{min-height:104px}
+ #lc7Root .lc7-middle{grid-template-columns:minmax(0,1fr)}
+ #lc7Root .lc7-flight{grid-template-columns:minmax(0,.47fr) minmax(0,1fr)}
+ #lc7Root .lc7-concepts{padding:20px 24px}
+ #lc7Root .lc7-concept-image{height:185px}
+ #lc7Root .lc7-hero-copy{max-width:50%;width:50%}
+ #lc7Root .lc7-hero h1{font-size:clamp(57px,6.3vw,83px)}
+ #lc7Root .lc7-hero-mascot{left:45%;height:86%;width:24%;bottom:-9%}
+ #lc7Root .lc7-location{grid-template-columns:minmax(0,1fr) minmax(0,.5fr)}
+ #lc7Root .lc7-map-panel{grid-column:1/-1;min-height:280px}
+}
+@media (min-width:761px) and (max-width:1040px){
+ #lc7Root .lc7-hero-art{min-height:375px}
+ #lc7Root .lc7-hero-copy{max-width:52%;width:52%}
+ #lc7Root .lc7-hero h1{font-size:clamp(55px,6.3vw,73px)}
+ #lc7Root .lc7-hero-mascot{left:47%;width:22%;height:78%;bottom:-8%}
+ #lc7Root .lc7-journey{grid-template-columns:minmax(0,.56fr) minmax(0,1.12fr)}
+}
+@media (max-width:900px){
+ #lc7Root .lc7-daily{grid-template-columns:minmax(0,1fr) minmax(0,.7fr)}
+ #lc7Root .lc7-journey{grid-column:1;grid-row:1}
+ #lc7Root .lc7-photo-card{grid-column:2;grid-row:1}
+ #lc7Root .lc7-impact{grid-column:1/-1;grid-row:2}
+ #lc7Root .lc7-middle{grid-template-columns:minmax(0,1fr)}
+ #lc7Root .lc7-location{grid-template-columns:minmax(0,1fr) minmax(0,.5fr)}
+ #lc7Root .lc7-map-panel{grid-column:1/-1}
+ #lc7Root .lc7-hero-mascot{left:46%;width:22%;height:82%;bottom:-10%}
+}
+@media (max-width:760px){
+ body.lc7-home-active .layout{display:block!important}
+ body.lc7-home-active .main{padding:0!important}
+ #lc7Root .lc7-hero-copy{width:100%;max-width:100%;padding:27px 21px 0}
+ #lc7Root .lc7-hero h1{font-size:clamp(64px,16vw,102px)}
+ #lc7Root .lc7-hero-mascot{left:22%;bottom:-2%;height:47%;width:44%}
+ #lc7Root .lc7-hero-photo{width:58%;height:48%;top:auto;bottom:0}
+ #lc7Root .lc7-hero-scribble.scribble-1{display:none}
+ #lc7Root .lc7-hero-scribble.scribble-2{right:4%;top:59%}
+ #lc7Root .lc7-daily{grid-template-columns:minmax(0,1fr)}
+ #lc7Root .lc7-journey{grid-column:1;grid-row:1;grid-template-columns:minmax(0,1fr)}
+ #lc7Root .lc7-photo-card{grid-column:1;grid-row:2}
+ #lc7Root .lc7-impact{grid-column:1;grid-row:3}
+ #lc7Root .lc7-middle{grid-template-columns:minmax(0,1fr)}
+ #lc7Root .lc7-location{grid-template-columns:minmax(0,1fr)}
+ #lc7Root .lc7-map-panel{grid-column:1}
+ #lc7Root .lc7-photo-sticker img{width:66px;height:75px}
+ #lc7Root .lc7-peek-mascot{left:-41px;width:87px}
+}
+@media (max-width:480px){
+ #lc7Root .lc7-hero-copy{padding:22px 16px 0}
+ #lc7Root .lc7-hero h1{font-size:clamp(55px,15vw,77px)}
+ #lc7Root .lc7-hero-mascot{left:17%;height:44%;width:48%;bottom:-1%}
+ #lc7Root .lc7-hero-photo{width:65%;height:43%}
+ #lc7Root .lc7-photo-sticker{top:13px;left:10px;padding:2px 7px 2px 0}
+ #lc7Root .lc7-photo-sticker img{width:53px;height:65px;flex-basis:53px}
+ #lc7Root .lc7-photo-sticker span{font-size:9px}
+ #lc7Root .lc7-concept-image .lc7-thumb-mascot{display:none!important}
+}
