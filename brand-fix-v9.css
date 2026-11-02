@@ -143,3 +143,22 @@ body.lc7-home-active #lc7Root .lc7-flight-card .lc7-platform-spend{font-size:11p
 @media(prefers-reduced-motion:reduce){
  body.lc7-home-active #lc7Root .lc7-hero-mascot.lc9-brand-emblem{transition:none!important}
 }
+
+
+/* Image-host fail-safe: retain each emblem's placement instead of moving an
+   orphaned placeholder into document flow. */
+.lc9-icon-fallback.lc7-hero-mascot,
+.lc9-icon-fallback.lc7-peek-mascot,
+.lc9-icon-fallback.lc7-thumb-mascot,
+.lc9-icon-fallback.lc8-intro-mascot{
+ display:grid!important;place-items:center!important;
+ color:white!important;font:900 clamp(25px,4vw,49px)/1 'Outfit',Arial,sans-serif;
+ letter-spacing:-.09em;
+}
+.lc9-icon-fallback.lc7-hero-mascot{position:absolute!important;transform:rotate(-11deg)!important}
+.lc9-icon-fallback.lc7-peek-mascot{position:absolute!important}
+.lc9-icon-fallback.lc7-thumb-mascot{position:absolute!important}
+.lc9-icon-fallback.lc8-intro-mascot{position:absolute!important;inset:0}
+body.lc7-home-active #lc7Root .lc7-photo-sticker .lc9-icon-fallback{width:66px;height:66px;flex:0 0 66px;background:#e66200;color:white;border:2px solid #fff5e7;border-radius:50%;font:900 20px 'Outfit',Arial,sans-serif}
+body.lc7-home-active #lc7Root .lc7-outro>.lc9-icon-fallback{height:74px;width:74px;flex:0 0 74px;background:#e66200;border:3px solid #fff;border-radius:50%;font:900 24px 'Outfit',Arial,sans-serif}
+body.lc7-home-active #lc7Root .lc7-footer-seal .lc9-icon-fallback{height:56px;width:56px;background:#e66200;border:2px solid #ffdab1;border-radius:50%;font:900 18px 'Outfit',Arial,sans-serif}
