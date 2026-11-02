@@ -58,6 +58,7 @@ function replayIntro(){
  DOC.body.classList.add('lc8-intro-open');
  DOC.body.classList.remove('lc8-intro-complete');
  DOC.documentElement.classList.remove('lc8-intro-finished');
+ DOC.documentElement.classList.remove('lc8-returning');
  initIntro(el,true);
 }
 function initIntro(node,replay){
