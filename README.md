@@ -98,3 +98,27 @@ La versión V4 sustituye visualmente las portadas y banners redundantes de V2/V3
 **Archivos**: experience-v4.js, experience-v4.css. Para volver a V3, basta quitar esos enlaces de index.html. Las secciones previas no se borraron.
 
 **Limitaciones**: Los escenarios son simulaciones aritméticas. Los clics potenciales no son visitas a tiendas. Las fotos de productos de DiDi/Rappi son referencias de catálogo en URLs externas y pueden necesitar sustitución por material aprobado por la marca para un uso comercial definitivo. No se verificaron creativos en un navegador con capturas; se validó sintaxis de JavaScript/CSS y publicación estática en Vercel.
+
+
+## V8 — Animated introduction & premium visual refresh (2 Nov 2026)
+
+The V8 release is **implemented in production code** and added after the existing V7 reference landing page. No original simulator, store dataset, map logic or creative page was replaced.
+
+**New files**
+- \`intro-v8.css\` — orange cinematic intro: original Caesar-inspired local SVG, product photography, staggered editorial headline, subtle rings, mascot lift, segmented non-numeric sequence indicator and scene-to-home transitions. Also refines the hero, KPI cards, platform cards, typography, imagery, maps and internal sections with scoped CSS.
+- \`intro-v8.js\` — first-open logic using per-tab sessionStorage, **Saltar intro**, **Escape to skip**, **↻ Ver intro** replay link in the footer, responsive navigation link to the home page, subtle scroll reveals and route-aware enhancements.
+- \`index.html\` — initially-visible accessible splash markup and an inert \`<template>\` for replay. Includes \`intro-v8.css\` and \`intro-v8.js\` after V7. A very small preflight script prevents a splash flash on repeated visits to the same browser session.
+
+**Accessibility and robustness**
+- Respects \`prefers-reduced-motion\`: skips the intro and disables page entrance animations.
+- Allows visitors to skip the intro immediately; it never pretends to report actual download progress.
+- A CSS fail-open fallback releases the overlay if a deferred script cannot run.
+- The intro plays once per tab session, but the user can replay it from the footer.
+
+**Still real, still modeled**
+- The baseline investment is COP 20,000,000, with an editable split between national reach and location-intent traffic.
+- All estimates, store pins and platform allocations remain their original modeled values.
+- 18 Colombian store references remain **subject to operational verification** and map coordinates remain approximate.
+- The mascot in the opening is original Caesar-inspired concept artwork, not an official character file. Brand-approved assets are recommended for external campaign publishing.
+
+**Deployment:** GitHub \`main\` automatically deploys to Vercel project \`sa-ntiago/lc\`, public domain \`https://lc-sa-ntiago.vercel.app/\`.
